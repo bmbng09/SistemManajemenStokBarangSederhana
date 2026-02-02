@@ -24,19 +24,6 @@ if (isset($_POST['simpan'])) {
     exit;
 }
 ?>
-<!-- <form method="post">
-<input name="no_rak" required placeholder="No Rak">
-<input name="kode" required placeholder="Kode">
-<input name="nama" required placeholder="Nama">
-<input name="nama_rak">
-<input name="type">
-<input name="stok" type="number" value="0">
-<input name="satuan">
-<input name="min_stock" type="number" value="0">
-<input name="tanggal_pr" type="date">
-<input name="mak">
-<button name="simpan">Simpan</button>
-</form> -->
 <link rel="stylesheet" href="../assets/css/style.css">
 
 <div class="sidebar">...</div>
@@ -52,9 +39,9 @@ if (isset($_POST['simpan'])) {
         <input name="nama" placeholder="Nama Material" required>
         <input name="nama_rak" placeholder="Nama Rak">
         <input name="type" placeholder="Type">
-        <input name="stok" type="number" value="0">
+        <input name="stok" placeholder="Aktual Stock" type="number">
         <input name="satuan" placeholder="Satuan">
-        <input name="min_stock" type="number" value="0">
+        <input name="min_stock" type="number" placeholder="Min Stock">
         <input name="tanggal_pr" type="date">
         <input name="mak" placeholder="MAK">
       </div>

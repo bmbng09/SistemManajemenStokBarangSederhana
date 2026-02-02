@@ -43,19 +43,33 @@ $data = mysqli_query($koneksi, "SELECT * FROM barang $where ORDER BY nama_materi
   <table>
     <tr>
       <th>No Rak</th>
-      <th>Kode</th>
-      <th>Nama</th>
-      <th>Stok</th>
+      <th>Kode Material</th>
+      <th>Nama Material</th>
+      <th>Nama Rak</th>
+      <th>Type</th>
+      <th>Aktual Stock</th>
+      <th>Satuan</th>
+      <th>Min Stock</th>
+      <th>Tanggal PR</th>
+      <th>MAK</th>
     </tr>
 
-    <?php while($d=mysqli_fetch_assoc($data)): ?>
+    <?php while($d = mysqli_fetch_assoc($data)): ?>
     <tr>
       <td><?= $d['no_rak'] ?></td>
       <td><?= $d['kode_material'] ?></td>
       <td><?= $d['nama_material'] ?></td>
-      <td class="<?= $d['stok'] <= $d['min_stock'] ? 'low-stock':'' ?>">
+      <td><?= $d['nama_rak'] ?></td>
+      <td><?= $d['type'] ?></td>
+
+      <td class="<?= $d['stok'] <= $d['min_stock'] ? 'low-stock' : '' ?>">
         <?= $d['stok'] ?>
       </td>
+
+      <td><?= $d['satuan'] ?></td>
+      <td><?= $d['min_stock'] ?></td>
+      <td><?= $d['tanggal_pr'] ?></td>
+      <td><?= $d['mak'] ?></td>
     </tr>
     <?php endwhile; ?>
   </table>
